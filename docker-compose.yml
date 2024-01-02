@@ -11,9 +11,9 @@ services:
   nodeapp:
     image: node:20
     volumes:
-      - ./dist:/usr/src/app
+      - .:/usr/src/app
     working_dir: /usr/src/app
-    command: node main.js
+    command: node dist/main.js
     environment:
       - REDIS_HOST=redis
     depends_on:
