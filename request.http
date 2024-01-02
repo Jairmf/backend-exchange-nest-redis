@@ -1,0 +1,32 @@
+
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "jair"
+}
+
+###
+GET http://localhost:3000/currency HTTP/1.1
+Content-Type: application/json
+Bearer: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphaXIiLCJpYXQiOjE3MDQxNzExMTUsImV4cCI6MTcwNDE3MjAxNX0.y2uWZBOcfuzy0auaAVXnqe2gyRU1mp6gunUjzqwTiQQ
+
+{
+    "monedaOrigen": "PEN", 
+    "monedaDestino": "USD", 
+    "monto": 100
+}
+
+###
+POST http://localhost:3000/currency HTTP/1.1
+Content-Type: application/json
+Bearer: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphaXIiLCJpYXQiOjE3MDQxNzExMTUsImV4cCI6MTcwNDE3MjAxNX0.y2uWZBOcfuzy0auaAVXnqe2gyRU1mp6gunUjzqwTiQQ
+
+{
+    "monedaOrigen": "PEN", 
+    "monedaDestino": "USD", 
+    "tipoDeCambio": 0.26
+}
+
+###
+GET http://localhost:3000/health-check HTTP/1.1
